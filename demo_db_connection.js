@@ -20,5 +20,14 @@ con.connect(function(err) {
 
   console.log("Connected!");
 
-});
+sql = "SELECT 1 FROM dual";
 
+  con.query(sql, function (err, result) {
+
+    if (err) throw err;
+
+    console.log("Result: " + result);
+
+  });
+
+});
